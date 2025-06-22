@@ -14,7 +14,6 @@ public class search {
         Object result = getValue(list, "orange");
         System.out.println(result);
 
-
     }
 
 //Checks if a list there is a common value on both lists
@@ -68,5 +67,22 @@ public class search {
         return null;//else return false
     }
 
-    
+    public static String[] getValues(){
+        String[] list = {"apple","grape","melon","kiwi", "mango"};
+        return list;
+    }
+//Combine two lists into one
+    public static String[] merge(String[] first, String[] second){
+        String[] result = new String[first.length + second.length];
+        for(int i = 0; i < first.length; i++){
+            result[i] = first[i];
+        }
+        for(int i = 0; i < second.length; i++){
+            result[i] = second[i];
+        }
+        return result;
+    }
+    //Transfer values from an array to another one
+   
+
 }
