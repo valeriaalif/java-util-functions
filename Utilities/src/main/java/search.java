@@ -16,7 +16,7 @@ public class search {
 
     }
 
-//Checks if a list there is a common value on both lists
+    //Checks if a list there is a common value on both lists
     public static boolean hasElement(String [] original, String[] modified){// uses two lists of strings as parameters
         for(int i = 0; i < original.length; i++){ //search original list
             for(int j = 0; j < modified.length; j++){//search modified list
@@ -31,7 +31,7 @@ public class search {
 
 
 
-//Compares two arrays, looks for the duplicates on both arrays and returns those duplicates
+    //Compares two arrays, looks for the duplicates on both arrays and returns those duplicates
     public static String[] getDuplicates(String[] original, String[] selected){// uses two lists of strings as parameters
         String[] duplicates = new String[original.length];//size of the original array
         int count = 0;//quantity of elements stored in the common array
@@ -57,7 +57,7 @@ public class search {
     }
 
 
-//Searches for a value and returns that value
+    //Searches for a value and returns that value
     public static Object getValue(String[] list, String value){//uses a list and value as parameters
         for(int i = 0; i < list.length; i++){//iterate the list
             if(list[i].equals(value)){//compare if the value matches the index
@@ -71,7 +71,7 @@ public class search {
         String[] list = {"apple","grape","melon","kiwi", "mango"};
         return list;
     }
-//Combine two lists into one
+    //Combine two lists into one
     public static String[] merge(String[] first, String[] second){
         String[] result = new String[first.length + second.length];
         for(int i = 0; i < first.length; i++){
@@ -82,7 +82,23 @@ public class search {
         }
         return result;
     }
+
     //Transfer values from an array to another one
-   
+    public static String[] setValues(String[] original){
+        String[] copy = new String[original.length];
+        for(int i = 0; i < original.length; i++){
+            original[i] = copy[i];
+        }
+        return copy;
+    }
+
+    //Iterate a list using foreach to print values
+    public static void printValues(String[] items){
+        for(String item : items){
+            System.out.println(item);
+        }
+    }
+
+
 
 }
